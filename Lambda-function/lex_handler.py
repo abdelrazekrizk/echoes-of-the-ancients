@@ -169,10 +169,13 @@ def lambda_handler(event, context):
                 }
             }
     elif intent_name == 'SaveProgressIntent':
-        # Save player progress to DynamoDB
-        progress = slots.get('Progress')  # Assuming you have a slot for progress
+        progress = slots.get('Progress')  # Get the progress from the slot
+        inventory = slots.get('Inventory', [])  # Assuming you might want to save inventory as well
+        current_location = slots.get('CurrentLocation', 'starting_chamber')  # Default location
+        quests = slots.get('Quests', {})  # Assuming you might want to save quests as well
+
         if progress:
-            save_player_progress(player_id, progress)
+            save_player_progress(player_id, progress, inventory, current_location, quests)
             response = {
                 "dialogAction": {
                     "type": "Close",
@@ -260,4 +263,4 @@ def lambda_handler(event, context):
                 }
             }
         }
-    return response  
+    return response

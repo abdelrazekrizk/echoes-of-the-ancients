@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Get the profile name from environment or use a default
-profile_name = os.getenv("AWS_PROFILE") # provide your profile name or set it in .env
+profile_name = os.getenv("AWS_PROFILE")  # Provide your profile name or set it in .env
 
 # Create a session using the profile
 session = boto3.Session(profile_name=profile_name)
@@ -43,7 +43,7 @@ def generate_story_segment(prompt):
             accept="application/json",
             contentType="application/json"
         )
-        response_body = json.loads(response.get("body").read().decode())
+        response_body = json.loads(response["body"].read().decode())
         story_text = response_body["completion"]
         return story_text
     except Exception as e:
@@ -84,8 +84,8 @@ def talk_to_lex(user_input, session_attributes):
     try:
         response = lex.post_text(
             botName='GameInteractions',  # Replace with your bot name
-            botAlias='Prod',            # Replace with your bot alias
-            userId='testuser',         # Replace with a more robust user ID later
+            botAlias='Prod',              # Replace with your bot alias
+            userId='testuser',            # Replace with a more robust user ID later
             inputText=user_input,
             sessionAttributes=session_attributes
         )
@@ -111,7 +111,6 @@ def main():
 
     while True:
         action = input("> ").lower()
-
         if action == "quit":
             save_game_state(player_id, location, inventory)
             break
@@ -150,4 +149,4 @@ def main():
             session_attributes = lex_response.get('sessionAttributes', session_attributes)  # Update session attributes
 
 if __name__ == "__main__":
-    main()
+    main()  
