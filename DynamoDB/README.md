@@ -26,3 +26,52 @@ Here's a summary of how DynamoDB is used:
   "location": "starting_chamber", // Current location of the player
   "inventory": ["torch"] // Array of items in the player's inventory
 }
+```
+- DynamoDB data streming
+```json
+{
+  "player_id": {
+    "S": "test_player"
+  },
+  "current_location": {
+    "S": "starting_chamber"
+  },
+  "inventory": {
+    "L": [
+      {
+        "S": "torch"
+      },
+      {
+        "S": "key"
+      }
+    ]
+  },
+  "progress": {
+    "S": "You are in the starting chamber. You have taken the torch."
+  },
+  "quests": {
+    "M": {
+      "defeat_guard": {
+        "M": {
+          "description": {
+            "S": "Defeated the guard in the north chamber."
+          },
+          "status": {
+            "S": "completed"
+          }
+        }
+      },
+      "find_artifact": {
+        "M": {
+          "description": {
+            "S": "Find the ancient artifact in the hidden room."
+          },
+          "status": {
+            "S": "in-progress"
+          }
+        }
+      }
+    }
+  }
+}
+```
