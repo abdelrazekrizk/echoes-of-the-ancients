@@ -1,3 +1,5 @@
+# Amazon Lex
+
 **Objective:** Create a chatbot named GameSage designed to enhance player engagement in our text-based adventure game.<p>This bot will serve as a virtual game guide, allowing players to navigate the game world,interact with objects, solve puzzles, engage in combat, and manage inventory seamlessly.<p>The bot will use intents such as movement, item collection, trading, quest management, and more to offer an immersive experience.<p>Players can ask for help, seek hints, or explore game lore interactively.<p>Slots like Location, Item, and Action ensure the bot processes user commands contextually.<p>`GameSage` will also handle dynamic conversations for trading and questsoffering a responsive, player-centric<p>
 
 ## Amazon Lex in "Echoes of the Ancients"
@@ -17,7 +19,7 @@ Here's a summary of how Lex  is used, including its creation and Lambda integrat
 **Key Concepts in Our Lex Bot Configuration:**
 
 *   **Intents:** Represent actions the player can perform. Examples:
-    *   `GreetIntent` (e.g., "hello", "hi")
+    *   `SageBot_Greetings_Intent` (e.g., "hello", "hi")
     *   `SageBot_Location_Intent` (e.g., "where am I", "tell me about this place")
     *   `SageBot_Item_Intent` (e.g., "take the key", "grab torch")
     *   `SageBot_Look_In_Object_Intent` (e.g., "look around", "examine the table")
@@ -70,6 +72,7 @@ C:.
             │   │   └───Slots
             │   │       └───Directions
             │   ├───SageBot_Fallback_Intent
+                ├───SageBot_Greetings_Intent
             │   ├───SageBot_Game_Settings_Intent
             │   ├───SageBot_Help_Intent
             │   │   └───Slots
