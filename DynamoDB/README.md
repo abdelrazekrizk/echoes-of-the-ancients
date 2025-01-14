@@ -27,7 +27,7 @@ Here's a summary of how DynamoDB is used:
   "inventory": ["torch"] // Array of items in the player's inventory
 }
 ```
-- DynamoDB data streming
+- DynamoDB Data Streming
 ```json
 {
   "player_id": {
