@@ -13,7 +13,8 @@ Here's a summary of how Lex  is used, including its creation and Lambda integrat
 *   **Natural Language Understanding (NLU):** Lex analyzes player input (text) and attempts to understand the player's intent (what they want to do).
 *   **Intent Recognition:** Lex identifies the specific action the player wants to perform. These actions are defined as *intents* in the Lex bot configuration.
 *   **Slot Extraction:** Along with identifying the intent, Lex extracts specific pieces of information from the player's input. These pieces of information are called *slots*.
-*   **Dialog Management (Limited in this context):** We are using a simplified approach. The primary use of Lex is to recognize intents and extract slots, which are then passed to the Lambda function.
+*   **Dialog Management (Limited in this context):** We are using a simplified approach. The primary use of Lex is to recognize intents and extract slots, which are then passed to the
+Lambda function.
 *   **Integration with Lambda:** Lex acts as a trigger for an AWS Lambda function (our code hook). Once Lex has processed the player input, it invokes the Lambda function and passes the identified intent and slot values as an event.
 
 **Key Concepts in Our Lex Bot Configuration:**
