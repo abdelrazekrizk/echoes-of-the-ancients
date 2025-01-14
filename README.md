@@ -20,7 +20,7 @@ This project was created for the `AWS Game Builder Challenge` to demonstrate the
     *   AWS CLI configured with appropriate credentials (including access to Bedrock, DynamoDB, Lex, Polly, and S3).
     *   A virtual environment (recommended).
     *   A DynamoDB table named `player_data` with a primary key `player_id` (String).
-    *   A Lex V1 bot named `SageBot` (or your chosen name) configured with the correct intents and slots, and connected to the Lambda function.
+    *   A Lex  bot named `SageBot` (or your chosen name) configured with the correct intents and slots, and connected to the Lambda function.
     *   A Lambda function configured with access to Bedrock and DynamoDB.
     *   An S3 bucket for storing game assets .
 2.  **Setup:**
@@ -63,7 +63,7 @@ The game is a text-based adventure where you explore locations, interact with ob
 
 The game uses a serverless architecture on AWS:
 
-*   **Amazon Lex (V1):** Handles natural language understanding.
+*   **Amazon Lex :** Handles natural language understanding.
 *   **AWS Lambda:** Acts as the game's backend logic.
 *   **Amazon Bedrock:** Provides access to powerful foundation models for dynamic story and description generation.
 *   **Amazon DynamoDB:** Stores persistent game data.
