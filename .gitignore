@@ -2,6 +2,8 @@
 temp/*
 # Lex Chat Bot code files
 Lex Chat Bot/Bot-Code
+# # Lex Chat Bot code files code files
+DynamoDB/Code
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
