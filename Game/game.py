@@ -50,18 +50,19 @@ def generate_story_segment(prompt):
         print(f"Error calling Bedrock: {e}")
         return "An error has occurred."
 
-def save_game_state(player_id, location, inventory):
+def save_game_state(player_id, location, inventory, quests):
     try:
         table.put_item(
             Item={
                 'player_id': player_id,
-                'location': location,
-                'inventory': inventory
+                'current_location': location,
+                'inventory': inventory,
+                'quests': quests
             }
         )
         print("Game state saved.")
     except Exception as e:
-        print(f"Error saving game state: {e}")
+        print(f"Error saving game state: {e}") 
 
 def load_game_state(player_id):
     try:
@@ -149,4 +150,4 @@ def main():
             session_attributes = lex_response.get('sessionAttributes', session_attributes)  # Update session attributes
 
 if __name__ == "__main__":
-    main()  
+    main()

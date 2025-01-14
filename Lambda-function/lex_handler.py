@@ -58,13 +58,16 @@ def get_location_description(location):
     else:
         return "You are in an unknown location."
 
-def save_player_progress(player_id, progress):
+def save_player_progress(player_id, progress, inventory, current_location, quests):
     table.put_item(
         Item={
             'player_id': player_id,
-            'progress': progress
+            'progress': progress,
+            'inventory': inventory,
+            'current_location': current_location,
+            'quests': quests
         }
-    )
+    )  
 
 def load_player_progress(player_id):
     response = table.get_item(Key={'player_id': player_id})
