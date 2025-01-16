@@ -18,7 +18,7 @@ Here's a summary of how Amazon Q was used:
 *   **Code Explanation and Review:**
     *   When working with unfamiliar AWS APIs or complex logic, Q provided clear and concise explanations of code snippets.
     *   It also helped review existing code, suggesting improvements for clarity, efficiency, and adherence to best practices. This was particularly useful for understanding the intricacies of the Lex response format and the Lambda handler structure.
-    ![Amazon Q Code Explanation and Review](./Amazon%20Q-Screenshot%20(8).png)
+    ![Amazon Q Code Explanation and Review](./Screenshots/Amazon%20Q-Screenshot%20(8).png)
 
 *   **Code Commenting:**
     *   Q assisted in generating detailed and consistent comments throughout the codebase. This improved code readability and maintainability, making it easier for other developers (or future versions of myself) to understand the code's purpose and functionality.
