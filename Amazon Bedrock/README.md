@@ -39,9 +39,6 @@ session = boto3.Session(profile_name=profile_name)
 
 # Create clients using the session
 bedrock = session.client(service_name="bedrock-runtime", region_name=os.getenv("region"))
-dynamodb = session.resource('dynamodb', region_name=os.getenv("region"))
-table = dynamodb.Table('player_data')
-lex = session.client('lex-runtime', region_name=os.getenv("region"))
 
 def generate_story_segment(prompt):
     body = {

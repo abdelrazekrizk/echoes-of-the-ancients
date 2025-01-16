@@ -1,5 +1,4 @@
 ## Amazon Q in "Echoes of the Ancients" Development
-
 Amazon Q, the AI-powered coding companion, played a significant role in streamlining and enhancing the development process of "Echoes of the Ancients." It assisted in various tasks, from generating code to improving documentation, contributing to a more efficient and higher-quality development experience.
 
 <p float="left">
