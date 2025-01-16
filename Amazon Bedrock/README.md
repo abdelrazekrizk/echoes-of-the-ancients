@@ -2,9 +2,13 @@
 
 Amazon Bedrock is a key component of "Echoes of the Ancients," providing access to powerful foundation models (FMs) that enable dynamic story generation and enhance the game's narrative. Unlike some other AWS services, you don't "create" a Bedrock service instance. Instead, you gain access to the service and its available models through your AWS account.
 
-Here's a summary of how Bedrock is used, including the access and usage process:
+<p float="left">
+  <img src="./Character Design/1-Character Design.png" width="49%">
+  <img src="./Ancient Ruins/2-Ancient Ruins.png" width="49%">
+</p>
 
 **Key Functions:**
+
 
 *   **Dynamic Story and Description Generation:** Bedrock is used to generate:
     *   Descriptions of locations when the player uses the `look` command.
@@ -58,7 +62,7 @@ def generate_story_segment(prompt):
         print(f"Error calling Bedrock: {e}")
         return "An error occurred during story generation."
 ```
-Summary:
+**Summary:**
 
 The Lambda function determines that it needs to generate text (e.g., when the player uses the look command).
 The Lambda function constructs a prompt based on the game context (e.g., the player's current location).

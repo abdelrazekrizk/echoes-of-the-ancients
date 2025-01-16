@@ -2,7 +2,10 @@
 
 Amazon Q, the AI-powered coding companion, played a significant role in streamlining and enhancing the development process of "Echoes of the Ancients." It assisted in various tasks, from generating code to improving documentation, contributing to a more efficient and higher-quality development experience.
 
-Here's a summary of how Amazon Q was used:
+<p float="left">
+  <img src="./Screenshots/Amazon Q-Screenshot (6).png" width="49%">
+  <img src="./Screenshots/Amazon Q-Screenshot.png" width="49%">
+</p>
 
 **Key Uses:**
 
@@ -18,7 +21,6 @@ Here's a summary of how Amazon Q was used:
 *   **Code Explanation and Review:**
     *   When working with unfamiliar AWS APIs or complex logic, Q provided clear and concise explanations of code snippets.
     *   It also helped review existing code, suggesting improvements for clarity, efficiency, and adherence to best practices. This was particularly useful for understanding the intricacies of the Lex response format and the Lambda handler structure.
-    ![Amazon Q Code Explanation and Review](./Screenshots/Amazon%20Q-Screenshot%20(8).png)
 
 *   **Code Commenting:**
     *   Q assisted in generating detailed and consistent comments throughout the codebase. This improved code readability and maintainability, making it easier for other developers (or future versions of myself) to understand the code's purpose and functionality.
