@@ -1,6 +1,6 @@
  # Amazon Bedrock in "Echoes of the Ancients"
 
-Amazon Bedrock is a key component of "Echoes of the Ancients," providing access to powerful foundation models (FMs) that enable dynamic story generation and enhance the game's narrative. Unlike some other AWS services, you don't "create" a Bedrock service instance. Instead, you gain access to the service and its available models through your AWS account.
+Amazon Bedrock is a key component of "Echoes of the Ancients," providing access to powerful foundation models (FMs) that enable dynamic story generation and enhance the game's narrative. <p>Unlike some other AWS services, you don't "create" a Bedrock service instance. <p>Instead, you gain access to the service and its available models through your AWS account.
 
 <p float="left">
   <img src="./Character Design/1-Character Design.png" width="49%">
