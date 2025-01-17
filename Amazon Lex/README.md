@@ -3,10 +3,7 @@
 **Objective:** Create a chatbot named GameSage designed to enhance player engagement in our text-based adventure game.<p>This bot will serve as a virtual game guide, allowing players to navigate the game world,interact with objects, solve puzzles, engage in combat, and manage inventory seamlessly.<p>The bot will use intents such as movement, item collection, trading, quest management, and more to offer an immersive experience.<p>Players can ask for help, seek hints, or explore game lore interactively.<p>Slots like Location, Item, and Action ensure the bot processes user commands contextually.<p>`GameSage` will also handle dynamic conversations for trading and questsoffering a responsive, player-centric<p>
 
 ## Amazon Lex in "Echoes of the Ancients"
-
 Amazon Lex plays a crucial role in "Echoes of the Ancients" by providing natural language understanding (NLU) capabilities. It allows players to interact with the game using natural language, making the experience more intuitive and immersive than simply typing rigid commands.
-
-Here's a summary of how Lex  is used, including its creation and Lambda integration:
 
 **Key Functions:**
 
