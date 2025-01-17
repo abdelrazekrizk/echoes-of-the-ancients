@@ -45,7 +45,6 @@ Lambda function.
 6.  **Bot Building:** After configuring the intents, slots, and Lambda integration, the Lex bot is built. This compiles the bot's definition and makes it ready to process user input.
 
 **Workflow Summary:**
-
 1.  Player enters text.
 2.  Text is sent to Lex.
 3.  Lex recognizes the intent and extracts slot values.

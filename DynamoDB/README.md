@@ -74,3 +74,14 @@ Amazon DynamoDB is used in "Echoes of the Ancients" as the persistent data store
   }
 }
 ```
+**Summary:**
+1.    When the game starts or a player loads a saved game, the load_game_state function is called.
+2.    load_game_state retrieves the game state from DynamoDB using the player_id.
+3.    During gameplay, when the player quits or explicitly saves the game, the save_game_state function is called.
+4.    save_game_state saves the current game state to DynamoDB.
+
+**Benefits of Using DynamoDB:**
+*    **Persistence:** Game progress is saved and can be resumed later.
+*    **Scalability:** Can handle a large number of players.
+*    **Performance:** Fast read and write operations.
+*    **Serverless:** No servers to manage.

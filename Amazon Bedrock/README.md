@@ -59,11 +59,17 @@ def generate_story_segment(prompt):
         print(f"Error calling Bedrock: {e}")
         return "An error occurred during story generation."
 ```
-**Summary:**
+**Workflow Summary:**
 
-The Lambda function determines that it needs to generate text (e.g., when the player uses the look command).
-The Lambda function constructs a prompt based on the game context (e.g., the player's current location).
-The Lambda function calls the generate_story_segment function, passing the prompt.
-generate_story_segment uses Boto3 to call the Bedrock API.
+1.    The Lambda function determines that it needs to generate text (e.g., when the player uses the look command).
+2.    The Lambda function constructs a prompt based on the game context (e.g., the player's current location).
+3.    The Lambda function calls the generate_story_segment function, passing the prompt.
+4.    generate_story_segment uses Boto3 to call the Bedrock API.
 Bedrock generates text based on the prompt and returns it to the Lambda function.
-The Lambda function sends the generated text back to the game client (via Lex).
+5.    The Lambda function sends the generated text back to the game client (via Lex).
+
+**Benefits of Using Bedrock:**
+
+*    Dynamic and Engaging Narrative: Creates more immersive and replayable experiences.
+*    Access to Powerful FMs: Provides access to state-of-the-art language models.
+*    Serverless Integration: Seamless integration with other AWS services, particularly Lambda.

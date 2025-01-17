@@ -57,16 +57,14 @@ def get_lore(lore_file):
         print(f"Error retrieving lore from S3: {e}")
         return "Lore not found."
 ```
+**Workflow Summary:**
+1.    Game assets (e.g., lore text files) are stored in an S3 bucket.
+2.    When the game needs to access an asset (e.g., when the player uses the read command), the Lambda function calls the S3 API using Boto3.
+3.    S3 returns the requested asset to the Lambda function.
+4.    The Lambda function processes the asset (e.g., decodes the text) and sends it back to the game client.
+
 **Benefits of Using S3:**
-
-* **Scalable and Durable Storage:** Ensures assets are always available.
-* **Cost-Effective:** Pay-as-you-go pricing based on storage used and data transfer.
-* **Easy Integration with Lambda:** Seamless integration with other AWS services.
-* **Centralized Asset Management:** Provides a central repository for all game assets.
-
-**Summary:**
-
-- Game assets (e.g., lore text files) are stored in an S3 bucket.
-When the game needs to access an asset (e.g., when the player uses the read command), the Lambda function calls the S3 API using Boto3.
-- S3 returns the requested asset to the Lambda function.
-The Lambda function processes the asset (e.g., decodes the text) and sends it back to the game client.
+*    **Scalable and Durable Storage:** Ensures assets are always available.
+*    **Cost-Effective:** Pay-as-you-go pricing based on storage used and data transfer.
+*    **Easy Integration with Lambda:** Seamless integration with other AWS services.
+*    **Centralized Asset Management:** Provides a central repository for all game assets.
