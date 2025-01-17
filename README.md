@@ -32,13 +32,13 @@ This project was created for the `AWS Game Builder Challenge` to demonstrate the
         *   `.venv/Scripts/activate` (Windows)
     *   Install the required packages: `pip install -r requirements.txt` (Make sure `playsound` is in your `requirements.txt`)
     *   Create a `.env` file in the project root and add your AWS credentials:
-
+*    **AWS IAM Identity Center:**
        ```markdown
         AWS_PROFILE=   # Your SSO profile name
         region=        # Your AWS region e.g., us-east-1
        ```
-
-        ```
+*    **AWS Identity and Access Management:**
+        ```markdown
         AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
         AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
         AWS_DEFAULT_REGION=YOUR_AWS_REGION

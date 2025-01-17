@@ -1,2 +1,3 @@
 boto3
 python-dotenv
+pip install playsound   # for play game sound if you use Amazon Polly
