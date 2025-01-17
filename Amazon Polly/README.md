@@ -11,12 +11,21 @@ Like Bedrock, Polly is a service you access; you don't create a specific Polly "
 **Accessing and Using Amazon Polly:**
 
 1.  **AWS Account and Region:** Ensure you have an AWS account and are working in a region where Polly is available.
-2.  **Boto3 Integration:** The Lambda function uses the Boto3 library to interact with Polly. Here's the relevant code:
+2.    **Install via pip:**
+
+    ```python
+    pip install playsound3
+    ```
+
+3.  **Boto3 Integration:** The Lambda function uses the Boto3 library to
+interact with Polly. Here's the relevant code:
+
 
 ```python
 import os
 import boto3
 import json
+from playsound3 import playsound
 from dotenv import load_dotenv
 
 load_dotenv()
