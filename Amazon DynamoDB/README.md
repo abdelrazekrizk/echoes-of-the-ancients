@@ -1,6 +1,6 @@
 ## Amazon DynamoDB in "Echoes of the Ancients"
 
-Amazon DynamoDB is used in "Echoes of the Ancients" as the persistent data store for the game's state. This allows players to save their progress and resume the game later without losing their place.
+Amazon DynamoDB is used in "Echoes of the Ancients" as the persistent data store for the game's state. <p>This allows players to save their progress and resume the game later without losing their place.
 
 
 **Key Functions:**
