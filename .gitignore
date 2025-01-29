@@ -6,8 +6,8 @@ Amazon Lex/Bot-Code
 # DynamoDB code files
 DynamoDB/Code
 # Drawio files
-./*.drawio
-./*.drawio.bkp
+Architecture Diagram/*.drawio
+Architecture Diagram/*.drawio.bkp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
