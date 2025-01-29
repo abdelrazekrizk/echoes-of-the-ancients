@@ -5,6 +5,10 @@ Lex Chat Bot/Bot-Code
 Amazon Lex/Bot-Code
 # DynamoDB code files
 DynamoDB/Code
+# Drawio files
+.drawio
+.drawio.bkp
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

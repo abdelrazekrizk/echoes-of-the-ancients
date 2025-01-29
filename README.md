@@ -59,19 +59,9 @@ The game is a text-based adventure where you explore locations, interact with ob
 *   **Reading Lore:** Use commands like `read ancient_scroll` to access background information stored in S3.
 *   **Saving and Quitting:** Use `save game` to save your progress and `quit` or `exit` to exit the game.
 
-## Technical Architecture
-
-The game uses a serverless architecture on AWS:
-
-*   **Amazon Lex :** Handles natural language understanding.
-*   **AWS Lambda:** Acts as the game's backend logic.
-*   **Amazon Bedrock:** Provides access to powerful foundation models for dynamic story and description generation.
-*   **Amazon DynamoDB:** Stores persistent game data.
-*   **Amazon S3:** Stores static game assets, such as lore text files.
-*   **Amazon Polly:** Provides text-to-speech functionality for descriptions and NPC dialogue.
 ## Architecture Diagram for "Echoes of the Ancients"
 
-![Echoes of the Ancients Architecture](echoes-of-the-ancients-architecture.png)
+![Echoes of the Ancients Architecture](./Architecture%20Diagram/Serverless-Game-Architectur.png)
 
 **Workflow:**
 
@@ -86,6 +76,58 @@ The game uses a serverless architecture on AWS:
     *   Sends a response back to Lex.
 5.  Lex relays the response to the player.
 6.  The game client uses Polly to speak the text responses.
+
+## Technical Architecture
+
+"Echoes of the Ancients" utilizes a combination of serverless and managed AWS services to deliver a dynamic and engaging text-based adventure.
+The architecture is designed for scalability, security, and cost-effectiveness.
+
+**Core Components:**
+
+*   **Amazon Lex :** Handles natural language understanding (NLU). Lex interprets player input, identifies intents (actions), and extracts slots (information) to understand player commands.
+
+*   **AWS Lambda:** Serves as the game's backend logic. Lambda functions are triggered by events from Lex and perform the following tasks:
+    *   Managing game state (player location, inventory, etc.).
+    *   Interacting with Amazon DynamoDB for persistent data storage.
+    *   Generating dynamic story content and descriptions using Amazon Bedrock.
+    *   Retrieving lore and other assets from Amazon S3.
+    *   Providing text-to-speech output via Amazon Polly.
+
+*   **Amazon Bedrock:** Provides access to powerful foundation models (FMs) for dynamic story and description generation.  This allows for a more immersive and unpredictable narrative experience.
+
+*   **Amazon DynamoDB:** Stores persistent game data, ensuring that player progress is saved between sessions.
+
+*   **Amazon S3:** Stores static game assets, such as lore text files, images, or other multimedia.
+
+*   **Amazon Polly:** Provides text-to-speech functionality, enhancing immersion by "speaking" descriptions and NPC dialogue.
+
+*   **Amazon Cognito:** Manages user authentication and authorization.  Players authenticate through Cognito to securely access the game.  This ensures that only authorized users can interact with the game and protects the underlying AWS resources.
+
+*   **Amazon API Gateway:** Acts as the entry point for all requests to the game's backend (Lambda).  API Gateway handles authentication (using Cognito), authorization, request routing, and other essential tasks. This provides a secure and scalable interface for the game.
+
+*   **Amazon EC2:**  (Current Deployment) Currently, the core game application (`game.py`) is deployed and runs on an Amazon EC2 instance.  While the architecture is primarily serverless, EC2 is used for hosting the main game logic.  Future enhancements will explore containerization with ECS.
+
+**Data Flow and Interactions:**
+
+1.  **Player Interaction:** Players interact with the game through a text-based interface.
+
+2.  **Authentication:** The game client (`game.py`) interacts with Amazon Cognito to authenticate the player. Upon successful authentication, Cognito returns an access token.
+
+3.  **Command Processing:** The game client sends player commands (text) along with the access token to Amazon Lex.
+
+4.  **Intent Recognition and Slot Extraction:** Lex processes the command, identifies the player's intent, and extracts relevant information (slots).
+
+5.  **API Gateway Routing and Authorization:** Lex sends the processed command to Amazon API Gateway. API Gateway verifies the access token provided by the client and, if valid, routes the request to the appropriate Lambda function.
+
+6.  **Game Logic Execution:** The Lambda function executes the game logic based on the player's intent and extracted slots.  This may involve:
+    *   Retrieving and updating game state in DynamoDB.
+    *   Generating dynamic content using Bedrock.
+    *   Accessing assets from S3.
+    *   Generating text-to-speech output via Polly.
+
+7.  **Response:** The Lambda function returns a response to API Gateway, which then forwards it to Lex, and finally back to the game client.
+
+8.  **Audio Output:** If the response includes text to be spoken, the Lambda function uses Polly to generate speech, which is then played by the game client.
 
 ## Use of Amazon Q
 
@@ -105,3 +147,4 @@ Amazon Q was used throughout the development process to enhance various aspects 
 *   Improved player ID management.
 *   **Voice Interaction (Amazon Transcribe):** Implement speech-to-text functionality to allow players to use voice commands. This would involve capturing audio from the player's microphone, sending it to Amazon Transcribe for transcription, and then processing the transcribed text as game input.
 *   More advanced audio features (background music, sound effects).
+*   **Containerization (ECS):** Migrating the game application to Amazon Elastic Container Service (ECS) is planned for future enhancements.  This will improve deployment, scalability, and resource utilization.
