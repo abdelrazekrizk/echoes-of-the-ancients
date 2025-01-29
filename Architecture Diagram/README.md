@@ -1,6 +1,6 @@
 ## Architecture Diagram for "Echoes of the Ancients"
 
-![Echoes of the Ancients Architecture](./Serverless-Game-Architectur.drawio.png)
+![Echoes of the Ancients Architecture](./Serverless-Game-Architectur(2).png)
 
 **Explanation and Diagram Guide:**
 
