@@ -69,6 +69,9 @@ The game uses a serverless architecture on AWS:
 *   **Amazon DynamoDB:** Stores persistent game data.
 *   **Amazon S3:** Stores static game assets, such as lore text files.
 *   **Amazon Polly:** Provides text-to-speech functionality for descriptions and NPC dialogue.
+## Architecture Diagram for "Echoes of the Ancients"
+
+![Echoes of the Ancients Architecture](echoes-of-the-ancients-architecture.png)
 
 **Workflow:**
 
