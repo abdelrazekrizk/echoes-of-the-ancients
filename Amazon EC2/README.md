@@ -1,6 +1,6 @@
-## Amazon EC2 Instance for "Echoes of the Ancients" (Current Deployment)
+## Amazon EC2 Instance for "Echoes of the Ancients"
 
-Currently, "Echoes of the Ancients" (`game.py`) is deployed and running on an Amazon EC2 instance. EC2 provides virtual servers in the cloud, giving you control over the operating system and environment.
+"Echoes of the Ancients" (`game.py`) is deployed and running on an Amazon EC2 instance. <p>EC2 provides virtual servers in the cloud, giving you control over the operating system and environment.
 
 **Key Functions:**
 
@@ -27,12 +27,12 @@ Currently, "Echoes of the Ancients" (`game.py`) is deployed and running on an Am
 4.  **Configure Environment Variables:** Set up your environment variables (AWS credentials, region, etc.) either directly in the shell or using a `.env` file and the `python-dotenv` library.  Remember to use AWS IAM Identity Center for local development, as described in the previous sections.
 5.  **Run the Game:** Run your `game.py` script. You may want to use a process manager like `tmux` or `screen` to keep the game running even if you disconnect from SSH.
 
-**Advantages of EC2 (Current Deployment):**
+**Advantages of EC2:**
 
 *   **Simplicity (Initially):**  Setting up a single EC2 instance can be relatively straightforward, especially for small projects.
 *   **Direct Control:** You have complete control over the server environment.
 
-**Disadvantages of EC2 (Current Deployment):**
+**Disadvantages of EC2:**
 
 *   **Management Overhead:** You are responsible for OS patching, security updates, and server maintenance.
 *   **Scalability Challenges:** Scaling up requires manually provisioning more EC2 instances.
