@@ -1,10 +1,19 @@
 # Ignore all files in the temp directory
+
+# Ignore all files in the temp directory
 temp/*
+
+
+# Ignore all files in the directory define by user
+Challenge-Feedback/*
+
 # Lex Chat Bot code files
 Lex Chat Bot/Bot-Code
 Amazon Lex/Bot-Code
+
 # DynamoDB code files
 DynamoDB/Code
+
 # Drawio files
 Architecture Diagram/*.drawio
 Architecture Diagram/*.drawio.bkp
