@@ -86,3 +86,6 @@ Amazon DynamoDB is used in "Echoes of the Ancients" as the persistent data store
 *    **Scalability:** Can handle a large number of players.
 *    **Performance:** Fast read and write operations.
 *    **Serverless:** No servers to manage.
+
+### Recource
+> Follow the Official Create a DynamoDB table [`Go Here`](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/getting-started-step-1.html)
