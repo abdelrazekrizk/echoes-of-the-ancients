@@ -3,6 +3,7 @@
 ## Project Overview
 
 "Echoes of the Ancients" is a text-based adventure game built entirely on AWS serverless technologies.<p> Players explore ancient ruins, interacting with the environment and non-player characters (NPCs) through text commands. <p>The game leverages Amazon Bedrock for dynamic story generation, Amazon Lex for natural language understanding, Amazon DynamoDB for persistent game state, and Amazon S3 for storing game assets. It also incorporates Amazon Polly for text-to-speech functionality. <p>This project demonstrates a practical application of serverless architecture for game development, showcasing scalability, cost-effectiveness, and the integration of AI services.
+
 ---
 
 ## Purpose
