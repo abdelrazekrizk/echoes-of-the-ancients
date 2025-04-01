@@ -3,6 +3,7 @@
 ## Project Overview
 
 "Echoes of the Ancients" is a text-based adventure game built entirely on AWS serverless technologies.<p> Players explore ancient ruins, interacting with the environment and non-player characters (NPCs) through text commands. <p>The game leverages Amazon Bedrock for dynamic story generation, Amazon Lex for natural language understanding, Amazon DynamoDB for persistent game state, and Amazon S3 for storing game assets. It also incorporates Amazon Polly for text-to-speech functionality. <p>This project demonstrates a practical application of serverless architecture for game development, showcasing scalability, cost-effectiveness, and the integration of AI services.
+---
 
 ## Purpose
 
@@ -12,6 +13,7 @@ This project was created for the `AWS Game Builder Challenge` to demonstrate the
 *   **Serverless Architecture:** Utilizing `Lambd`a, API Gateway (if we add a web interface later), and `DynamoDB` to create a scalable and cost-effective game backend.
 *   **AI Integration:** Leveraging `Amazon Bedrock` for dynamic and engaging narrative experiences, `Amazon Lex` for natural language understanding, and `Amazon Polly` for immersive audio.
 *   **Text-Based Adventure Genre:** Exploring the classic text adventure genre with modern AI enhancements.
+---
 
 ## How to Run the Game
 
@@ -46,6 +48,7 @@ This project was created for the `AWS Game Builder Challenge` to demonstrate the
 
 3.  **Run the Game:**
     *   Execute the game script: `python3 game.py`
+---
 
 ## Game Features and Gameplay
 
@@ -58,6 +61,7 @@ The game is a text-based adventure where you explore locations, interact with ob
 *   **Talking to NPCs:** Use commands like `talk to guard` (if there's a guard in the current location) to initiate a conversation. NPC responses are also spoken using Amazon Polly.
 *   **Reading Lore:** Use commands like `read ancient_scroll` to access background information stored in S3.
 *   **Saving and Quitting:** Use `save game` to save your progress and `quit` or `exit` to exit the game.
+---
 
 ## Architecture Diagram for "Echoes of the Ancients"
 
@@ -76,6 +80,7 @@ The game is a text-based adventure where you explore locations, interact with ob
     *   Sends a response back to Lex.
 5.  Lex relays the response to the player.
 6.  The game client uses Polly to speak the text responses.
+---
 
 ## Technical Architecture
 
@@ -129,6 +134,7 @@ The architecture is designed for scalability, security, and cost-effectiveness.
 
 8.  **Audio Output:** If the response includes text to be spoken, the Lambda function uses Polly to generate speech, which is then played by the game client.
 
+---
 ## Use of Amazon Q
 
 Amazon Q was used throughout the development process to enhance various aspects of the project:
@@ -138,6 +144,7 @@ Amazon Q was used throughout the development process to enhance various aspects 
 *   **Code Commenting:** Q helped generate more detailed and consistent comments.
 *   **Documentation Assistance:** Q assisted in writing parts of this README file.
 *   **VS Code Integration:** Using the Amazon Q extension for VS Code provided real-time code suggestions and error detection.
+---
 
 ## Future Enhancements
 
@@ -148,3 +155,17 @@ Amazon Q was used throughout the development process to enhance various aspects 
 *   **Voice Interaction (Amazon Transcribe):** Implement speech-to-text functionality to allow players to use voice commands. This would involve capturing audio from the player's microphone, sending it to Amazon Transcribe for transcription, and then processing the transcribed text as game input.
 *   More advanced audio features (background music, sound effects).
 *   **Containerization (ECS):** Migrating the game application to Amazon Elastic Container Service (ECS) is planned for future enhancements.  This will improve deployment, scalability, and resource utilization.
+
+---
+## Recource
+- AWS Identity and Access Management Documentation [`Go Here`](https://docs.aws.amazon.com/iam/)
+iam identy center
+-  Amazon Simple Storage Service Documentation [`Go Here`](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
+-  Amazon DynamoDB Documentation [`Go Here`](https://docs.aws.amazon.com/dynamodb/)
+-  AWS Lambda Documentation [`Go Here`](https://docs.aws.amazon.com/lambda/)
+-  Amazon API Gateway Documentation [`Go Here`](https://docs.aws.amazon.com/apigateway/)
+-  Amazon Cognito Documentation [`Go Here`](https://docs.aws.amazon.com/cognito/)
+-  Amazon Polly Documentation [`Go Here`](https://docs.aws.amazon.com/polly/)
+-  Amazon Lex Documentation [`Go Here`](https://docs.aws.amazon.com/lex/)
+-  Amazon EC2 Documentation [`Go Here`](https://docs.aws.amazon.com/ec2/)
+-  Amazon Bedrock Documentation [`Go Here`](https://docs.aws.amazon.com/bedrock/)
